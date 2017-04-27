@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  javaclient:
+    image: trainingteam/hello-redis-java:dev
+  
+  redis:
+    image: redis
