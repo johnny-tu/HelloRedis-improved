@@ -7,6 +7,7 @@ public class RedisClient {
 	private Jedis jedis;
 	
 	public static final String SUCCESS = "success";
+	public static final String FAIL = "No response from redis";
 
 	public RedisClient(Jedis jedis) {
 		this.jedis =jedis;
@@ -20,6 +21,6 @@ public class RedisClient {
 			return SUCCESS;
 		}
 		
-		return null;
+		return FAIL;
 	}
 }

@@ -44,7 +44,7 @@ public class AppTest {
 		String response = redisClient.pingRedis();
 		
 		//expect
-		assertEquals(response, null);
+		assertEquals(response, RedisClient.FAIL);
 	}
 
 }

@@ -13,6 +13,15 @@ public class App
         Jedis jedis = new Jedis("redis");
         RedisClient redisClient = new RedisClient(jedis);
         
-        System.out.println(redisClient.pingRedis());
+        while(true) {
+        	try {
+        		Thread.sleep(5000);
+        		System.out.println("pinging redis server: " + redisClient.pingRedis());
+        	}
+        	catch (Exception e) {
+        		System.out.println(e.getMessage());
+        	}
+        		
+        }
     }
 }
