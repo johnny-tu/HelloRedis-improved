@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-ADD target/*.jar /helloredis
+ADD /target /helloredis
 WORKDIR /helloredis
 
-ENTRYPOINT ["java", "-jar", "App"]
+ENTRYPOINT ["java", "-jar", "helloredis-0.1-SNAPSHOT.jar"]
